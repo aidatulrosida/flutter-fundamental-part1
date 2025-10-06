@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-// This widget can be used as your main app or as a part of another widget tree.
 class FabWidget extends StatelessWidget {
+  const FabWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
