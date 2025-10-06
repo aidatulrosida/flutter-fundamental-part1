@@ -1,14 +1,24 @@
 import 'package:flutter/material.dart';
 
-class MyTextWidget extends StatelessWidget {
-  const MyTextWidget({Key? key}) : super(key: key);
+class TextFieldWidget extends StatelessWidget {
+  const TextFieldWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
-      "Nama saya Aiida, sedang belajar Pemrograman Mobile",
-      style: TextStyle(color: Colors.red, fontSize: 14),
-      textAlign: TextAlign.center,
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text("Contoh TextField")),
+        body: const Padding(
+          padding: EdgeInsets.all(16.0),
+          child: TextField(
+            obscureText: false,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Nama',
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
